@@ -1,11 +1,19 @@
+// Import skill logos
+import reactLogo from '../assets/images/react.png';
+import expressLogo from '../assets/images/express.png';
+import luaLogo from '../assets/images/lua.png';
+import cppLogo from '../assets/images/cpp.png';
+import mysqlLogo from '../assets/images/mysql.png';
+import tailwindLogo from '../assets/images/tailwindcss.png';
+
 export default function MyInfo() {
   const skills = [
-    { name: "React.js", proficiency: 40 }, // ~40% based on your image
-    { name: "Express.JS", proficiency: 60 }, // ~60%
-    { name: "Lua", proficiency: 30 }, // ~30%
-    { name: "C++", proficiency: 35 }, // ~35%
-    { name: "MySQL", proficiency: 60 }, // ~60%
-    { name: "TailwindCSS", proficiency: 10 } // ~10%
+    { name: "React.js", proficiency: 40, logo: reactLogo },
+    { name: "Express.JS", proficiency: 60, logo: expressLogo },
+    { name: "Lua", proficiency: 30, logo: luaLogo },
+    { name: "C++", proficiency: 35, logo: cppLogo },
+    { name: "MySQL", proficiency: 60, logo: mysqlLogo },
+    { name: "TailwindCSS", proficiency: 10, logo: tailwindLogo }
   ];
 
   return (
@@ -22,11 +30,13 @@ export default function MyInfo() {
       <div className="space-y-8">
         {skills.map((skill, index) => (
           <div key={index} className="flex items-center gap-6">
-            {/* Logo Placeholder */}
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="text-white text-sm font-bold">
-                {skill.name.charAt(0)}
-              </span>
+            {/* Skill Logo */}
+            <div className="w-12 h-12 bg-transparent rounded-lg flex items-center justify-center flex-shrink-0 p-1">
+              <img 
+                src={skill.logo} 
+                alt={`${skill.name} logo`}
+                className="w-full h-full object-contain filter drop-shadow-lg"
+              />
             </div>
             
             {/* Skill Name */}
