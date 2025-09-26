@@ -1,19 +1,52 @@
 export default function MyInfo() {
+  const skills = [
+    { name: "React.js", proficiency: 40 }, // ~40% based on your image
+    { name: "Express.JS", proficiency: 60 }, // ~60%
+    { name: "Lua", proficiency: 30 }, // ~30%
+    { name: "C++", proficiency: 35 }, // ~35%
+    { name: "MySQL", proficiency: 60 }, // ~60%
+    { name: "TailwindCSS", proficiency: 10 } // ~10%
+  ];
+
   return (
   <div className="pt-8 md:pt-16 px-4 md:px-8 pr-8 md:pr-16 lg:pr-24 relative">
-    <h2 className="text-3xl md:text-7xl lg:text-9xl font-sifonn text-right mb-4 md:mb-2">
+    <h2 className="text-3xl md:text-7xl lg:text-9xl font-sifonn text-right mb-8 md:mb-12">
       Know More<br />
       about me
     </h2>
     
-    {/* Circle 1 */}
-    <div className="absolute w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-yellow-600 via-yellow-800 to-transparent opacity-80 blur-sm top-10 left-10"></div>
-    
-    {/* Circle 2 */}
-    <div className="absolute w-24 h-24 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-orange-600 via-red-800 to-transparent opacity-70 blur-sm bottom-20 right-20"></div>
-    
-    {/* Circle 3 */}
-    <div className="absolute w-28 h-28 md:w-40 md:h-40 lg:w-56 lg:h-56 rounded-full bg-gradient-to-br from-amber-600 via-amber-900 to-transparent opacity-75 blur-sm top-1/2 left-1/4"></div>
+    {/* Skills Section */}
+    <div className="max-w-6xl">
+      <h3 className="text-2xl md:text-3xl font-neauebold text-white mb-6">Skills</h3>
+      
+      <div className="space-y-8">
+        {skills.map((skill, index) => (
+          <div key={index} className="flex items-center gap-6">
+            {/* Logo Placeholder */}
+            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span className="text-white text-sm font-bold">
+                {skill.name.charAt(0)}
+              </span>
+            </div>
+            
+            {/* Skill Name */}
+            <div className="w-40 flex-shrink-0">
+              <span className="text-white font-neauereg text-lg md:text-xl">
+                {skill.name}
+              </span>
+            </div>
+            
+            {/* Progress Bar */}
+            <div className="flex-1 h-7 bg-gray-700 rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full transition-all duration-1000 ease-out"
+                style={{ width: `${skill.proficiency}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
   );
 }
