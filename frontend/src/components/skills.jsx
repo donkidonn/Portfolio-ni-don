@@ -39,7 +39,7 @@ export default function MyInfo() {
             {/* Progress Bar */}
             <div className="flex-1 h-7 bg-gray-700 rounded-full overflow-hidden">
               <div 
-                className="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full transition-all duration-1000 ease-out"
+                className="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${skill.proficiency}%` }}
               ></div>
             </div>
