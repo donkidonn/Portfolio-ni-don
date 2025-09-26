@@ -9,7 +9,11 @@ export default function MyInfo() {
         informative sites, and exploring game development.
       </p>
     </div>
-    <div className="border-t-2 border-white w-full mt-6 md:mt-8 mb-6 md:mb-8"></div>
+    {/* Flowing Line 1 - Starting the journey */}
+    <div className="relative w-full mt-6 md:mt-8 mb-6 md:mb-8">
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-white to-orange-500 w-full"></div>
+      <div className="absolute right-0 top-0 w-3 h-3 bg-orange-500 rounded-full transform translate-y-[-6px]"></div>
+    </div>
   </div>
   );
 }

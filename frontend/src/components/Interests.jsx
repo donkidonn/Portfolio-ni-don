@@ -56,6 +56,14 @@ export default function Interests({
           </div>
         ))}
       </div>
+      
+      {/* Flowing Line 3 - Completing the journey */}
+      <div className="relative w-full mt-8 md:mt-12 mb-6 md:mb-8">
+        <div className="h-0.5 bg-gradient-to-r from-white via-orange-300 to-transparent w-full"></div>
+        <div className="absolute right-0 top-0 w-6 h-6 border-2 border-white rounded-full transform translate-y-[-12px] bg-orange-500"></div>
+        <div className="absolute right-8 top-0 w-3 h-3 bg-white rounded-full transform translate-y-[-6px]"></div>
+        <div className="absolute right-16 top-0 w-1 h-1 bg-orange-300 rounded-full transform translate-y-[-2px]"></div>
+      </div>
     </div>
   );
 }

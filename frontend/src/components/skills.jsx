@@ -46,6 +46,13 @@ export default function MyInfo() {
           </div>
         ))}
       </div>
+      
+      {/* Flowing Line 2 - Continuing the journey */}
+      <div className="relative w-full mt-8 md:mt-12 mb-6 md:mb-8">
+        <div className="h-0.5 bg-gradient-to-l from-transparent via-orange-400 to-white w-full"></div>
+        <div className="absolute left-0 top-0 w-2 h-2 bg-white rounded-full transform translate-y-[-4px]"></div>
+        <div className="absolute left-8 top-0 w-4 h-4 border-2 border-orange-400 rounded-full transform translate-y-[-8px] bg-transparent"></div>
+      </div>
     </div>
   </div>
   );
