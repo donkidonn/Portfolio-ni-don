@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "sifonn";
+  src: url("./assets/fonts/sifon_pro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neauebold";
+  src: url("./assets/fonts/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neauereg";
+  src: url("./assets/fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .font-sifonn {
+    font-family: "sifonn", sans-serif;
+  }
+  .font-neauebold {
+    font-family: "neauebold", sans-serif;
+  }
+  .font-neauereg {
+    font-family: "neauereg", sans-serif;
+  }
+}
