@@ -17,7 +17,7 @@ export default function MyInfo() {
     
     {/* Skills Section */}
     <div className="max-w-6xl">
-      <h3 className="text-2xl md:text-3xl font-neauebold text-white mb-6">Skills</h3>
+      <h3 className="text-3xl md:text-5xl font-neauebold text-white mb-6">Skills</h3>
       
       <div className="space-y-8">
         {skills.map((skill, index) => (
